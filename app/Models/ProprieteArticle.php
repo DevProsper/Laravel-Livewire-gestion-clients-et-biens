@@ -5,12 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class TypeArticle extends Model
+class ProprieteArticle extends Model
 {
     use HasFactory;
 
-    public function articles()
+    public function type()
     {
-        return $this->hasMany(Article::class);
+        return $this->belongsTo(TypeArticle::class, "type_article_id", "id");
     }
 }

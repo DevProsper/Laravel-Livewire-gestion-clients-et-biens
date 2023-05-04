@@ -5,12 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class TypeArticle extends Model
+class Role extends Model
 {
     use HasFactory;
 
-    public function articles()
+    public function users()
     {
-        return $this->hasMany(Article::class);
+        return $this->belongsToMany(User::class, "user_role", "role_id", "user_id");
     }
 }
