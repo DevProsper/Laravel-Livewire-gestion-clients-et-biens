@@ -18,7 +18,7 @@ class ArticleFactory extends Factory
     public function definition()
     {
         return [
-            "nom" => $this->faker->lastName,
+            "nom" => $this->faker->title(),
             "noSerie" => $this->faker->swiftBicNumber,
             "imageUrl" => "images/imageplaceholder.png",
             "type_article_id" => rand(1, 4),
